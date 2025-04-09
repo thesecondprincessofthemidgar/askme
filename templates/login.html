@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <a href="{% url 'index' %}" class="">Main page</a>
+</div>
+
+<div class="d-flex gap-3 mt-3 align-items-center">
+    <h2>Log In</h2>
+</div>
+
+<div class="row">
+    <div class="col-9">
+        <p style="color: rgb(198, 0, 0);">Sorry, wrong password!</p>
+
+
+        <div class="row mt-2">
+            <div class="col-2 mb-3">
+                <h4>Login: </h4>
+            </div>
+            <div class="col-4">
+                <input class="form-control" type="text" aria-label="default input example">
+            </div>
+
+        </div>
+        <div class="row mb-4">
+            <div class="col-2">
+                <h4>Password: </h4>
+            </div>
+            <div class="col-4">
+                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+
+        </div>
+        <div class="row mb-5">
+            <div class="col-2">
+
+            </div>
+            <div class="col-2">
+                <button class="btn btn-outline-warning">Log in</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-4">
+                <a href="{% url 'signup' %}">create new account</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <a href="{% url 'index' %}" class="">Main page</a>
+</div>
+
+<div class="row mt-4">
+    <div class="col-9">
+        {% include 'layouts/one_question.html' %}
+    </div>
+
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+{% endblock %}

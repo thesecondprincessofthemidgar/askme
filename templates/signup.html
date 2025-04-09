@@ -1,0 +1,85 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <h1>Registration</h1>
+</div>
+
+<div class="row mt-2">
+    <div class="col-9">
+        <p style="color: rgb(198, 0, 0);">Sorry, the email address is already registered!</p>
+        <div class="row">
+            <div class="col-9">
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>Login: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" value="milo" aria-label="Disabled input example">
+                    </div>
+                </div>
+                <!-- Milo Valentine -->
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>Email: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" value="milo@gmail.com"
+                            aria-label="Disabled input example">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>NickName: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" value="MiloMi"
+                            aria-label="Disabled input example">
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-4">
+                    <div class="col-2">
+                        <h5>Password: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input type="password" id="inputPassword6" value="fdfdfbdfbdfbd" class="form-control"
+                            aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-4">
+                    <div class="col-2">
+                        <h5>Repeat password: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input type="password" id="inputPassword6" value="fdfdfbdfbdfbd" class="form-control"
+                            aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>Upload avatar: </h5>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3 mt-2">
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <button class="btn btn-outline-primary">Register</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+
+
+
+{% endblock %}

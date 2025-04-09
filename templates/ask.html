@@ -1,0 +1,56 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <a href="{% url 'index' %}" class="">Main page</a>
+</div>
+
+<div class="d-flex gap-3 align-items-center mb-4 mt-3">
+    <h1>New Question</h1>
+</div>
+
+<div class="row">
+    <div class="col-9 mb-3">
+        <div class="row">
+            <div class="col-3 mb-3">
+                <label class="form-label">
+                    <h3>Title</h3>
+                </label>
+            </div>
+            <div class="col-8 mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 mb-3">
+                <label class="form-label">
+                    <h3>Text</h3>
+                </label>
+            </div>
+            <div class="col-8 mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 mb-3">
+                <label class="form-label">
+                    <h3>Tags</h3>
+                </label>
+            </div>
+            <div class="col-8 mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput2">
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-outline-primary me-2 col-2" type="submit">Ask</button>
+        </div>
+    </div>
+
+
+
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+
+{% endblock %}

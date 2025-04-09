@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content%}
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <h1>Hot Questions</h1>
+    <a href="{% url 'index' %}" class="">New Questions</a>
+</div>
+
+<div class="row">
+    <div class="col-9">
+        <div class="d-flex flex-column gap-3">
+            {% for question in questions %}
+                {% include 'layouts/quest_card.html' %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+<div class="mt-2">
+    {% include 'layouts/pagination.html' %}
+</div>
+
+{% endblock %}

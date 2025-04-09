@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <a href="{% url 'index' %}" class="">Main page</a>
+</div>
+
+<div class="d-flex gap-3 align-items-center mt-3 mb-3">
+    <h1>Tag: {{ tag }} </h1>
+</div>
+
+<div class="row">
+    <div class="col-9">
+        <div class="d-flex flex-column gap-3">
+            {% for question in questions %}
+                {% include 'layouts/quest_card.html' %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+<div class="mt-2">
+    {% include 'layouts/pagination.html' %}
+</div>

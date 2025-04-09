@@ -1,0 +1,52 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link class="bi bi-window" rel="icon" href="{% static 'img/window.svg' %}">
+    <title>Ask me</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">Ask me</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <a class="btn btn-outline-success me-2" href="{% url 'ask' %}" role="button">Ask</a>
+                </form>
+                <div></div>
+            </div>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'settings' %}">
+                        <img src="{% static 'img/avatar.svg' %}" alt="Logo" width="45" class="img-thumbnail">
+                        Milo Valentine
+                    </a>
+                    <a class="nav-link d-flex me-3" href="{% url 'settings' %}">Settings</a>
+                    <a class="nav-link " href="{% url 'login' %}">Log out</a>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <main class="container mb-3">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script src="src={% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

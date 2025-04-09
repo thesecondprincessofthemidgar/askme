@@ -1,0 +1,22 @@
+<div class="col-3 mb-3">
+    <section class="mb-3">
+        <h2>Popular Tags</h2>
+        <div>
+            {% for tag_name in tag_names %}
+                <a class="me-2 mb-2 btn btn-primary" href="{% url 'tag' tag_name %}" role="button">{{tag_name}}</a>
+            {% endfor %}
+        </div>
+    </section>
+    <section>
+        <h2>Best members</h2>
+        <div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="#">Elise Rosewood</a></li>
+                <li class="list-group-item"><a href="#">Muhammad George</a></li>
+                <li class="list-group-item"><a href="#">Michael White</a></li>
+                <li class="list-group-item"><a href="#">Matthew Moore</a></li>
+                <li class="list-group-item"><a href="#">Max Volsce</a></li>
+            </ul>
+        </div>
+    </section>
+</div>

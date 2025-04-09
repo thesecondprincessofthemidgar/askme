@@ -1,0 +1,67 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="d-flex gap-3 align-items-center mt-3">
+    <h1>Settings: Milo Valentine</h1>
+</div>
+
+<div class="row mt-2">
+    <div class="col-9">
+        <div class="row">
+            <div class="col-9">
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>Login: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" value="milo" aria-label="Disabled input example"
+                            disabled readonly>
+                    </div>
+                </div>
+                <!-- Milo Valentine -->
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>Email: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" value="milo@gmail.com"
+                            aria-label="Disabled input example" disabled readonly>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>NickName: </h5>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" value="MiloMi"
+                            aria-label="Disabled input example" disabled readonly>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-2 mb-3">
+                        <h5>Upload avatar: </h5>
+                    </div>
+                    <div class="col-4">
+                        <img src="{% static 'img/avatar.svg' %}" class="img-thumbnail" alt="Avatar">
+                        <div class="mb-3 mt-2">
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <button class="btn btn-outline-success">Save</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    {% include 'layouts/tags_members.html' %}
+</div>
+
+
+
+{% endblock %}
